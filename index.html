@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aura Installer</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <!-- Navbar Header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Aura Software Installer</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <img src="img/aura.jpg" class="img-fluid" alt="Responsive image">
+
+        <p class="lead">
+          Aura is a smart weather forecast display for your home. It's open
+          source, costs less than $20 to build, and assembles in seconds
+          without any wiring or soldering.
+        </p>
+        <p>
+          You can find the <a href="TODO">full project instructions here</a>. This page is
+          only for installing the software on the ESP32 board.
+        </p>
+        <h2 class="h4 mt-5 mb-3">Software Installation Instructions</h2>
+        <ol class="list-group list-group-numbered mb-4">
+          <li class="list-group-item">
+            Connect your ESP32-2432S028R ILI9341 board (with 2.8in screen) into
+            your computer's USB port.
+          </li>
+          <li class="list-group-item">
+            Click install. <strong>This will only work in Google Chrome or
+            Microsoft Edge.</strong>
+          </li>
+          <li class="list-group-item">
+            When prompted to choose a port, choose “USB Serial”.
+          </li>
+        </ol>
+
+        <!-- Install Button -->
+        <div class="text-center">
+          <script
+            type="module"
+            src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"
+          ></script>
+          <esp-web-install-button manifest="https://surrey-homeware.github.io/aura-installer/bin/manifest.json"></esp-web-install-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle (includes Popper) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
