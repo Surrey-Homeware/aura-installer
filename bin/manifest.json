@@ -4,7 +4,7 @@
     {
       "chipFamily": "ESP32",
       "parts": [
-        { "path": "bin/aura-firmware.bin", "offset": 0 }
+        { "path": "aura-firmware.bin", "offset": 0 }
       ]
     }
   ]
