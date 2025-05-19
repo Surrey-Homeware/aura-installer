@@ -61,6 +61,33 @@
           <esp-web-install-button manifest="https://surrey-homeware.github.io/aura-installer/bin/manifest.json"></esp-web-install-button>
         </div>
 
+        <h2 class="h4 mt-5 mb-3">Inverted Colors Fix</h2>
+        <p>
+          Some ESP32 boards store colors differently in RAM, so the screen shows up with the wrong colors.
+          If you have that issue, install this version instead.
+        </p>
+          <esp-web-install-button manifest="https://surrey-homeware.github.io/aura-installer/bin/manifest-inverted.json">
+            <button slot="activate">Install fix for inverted colors</button>
+          </esp-web-install-button>
+
+		<p>&nbsp;</p>
+        <h4>Help! Installation gets stuck at "Preparing to Install."</h4>
+        <p>
+        	It should not take very long to get past the "Preparing to Install" step. If it is stuck, it means that the board
+        	is not connected to the computer correctly or the board is not going into update mode.
+        </p>
+        <p>
+	        There are a variety of boards that have been produced and they may need slightly different approaches. Here
+	        are the most common solutions:
+        </p>
+        <ol>
+        	<li>In the list of ports, make sure you choose the one that says "USB Serial."
+        	<li>Some boards need to be forced into flash mode by <b>holding down the <a target="_blank" href="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2024/03/ESP32-Cheap-Yellow-Display-CYD-Board-ESP32-2432S028R-back-labeled.jpg">RST button</a> while starting the installation.</b></li>
+        	<li>Some boards need to be forced into flash mode by <b>pressing and holding <a target="_blank" href="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2024/03/ESP32-Cheap-Yellow-Display-CYD-Board-ESP32-2432S028R-back-labeled.jpg">BOOT button</a>, pressing and releasing the RST button, then finally release thing BOOT button.</b></li>
+        	<li>Some boards with two USB ports (USB-C and USB Micro) will only accept being flashed by one of the ports, so try both. While many USB-C boards will flash just fine via the USB-C connection, some only will update over the USB Micro connection.</li>
+        </ol>
+		Note: The linked picture of the back of the board is from <a target="_blank" href="https://randomnerdtutorials.com/esp32-cheap-yellow-display-cyd-pinout-esp32-2432s028r/">Random Nerd Tutorial's article</a>. Their site is great if you want to learn more about these boards.
+
         <h2 class="h5 mt-5 mb-3">Software Updates</h2>
         <p>To upgrade to the latest version, just re-install the software above.</p>
         <ol class="list-group mb-4">
@@ -73,17 +100,7 @@
           <li class="list-group-item">
             v1.0 - Initial release.
           </li>
-        </ol>
-
-        <h2 class="h4 mt-5 mb-3">Inverted Colors Fix</h2>
-        <p>
-          Some ESP32 boards store colors differently in RAM, so the screen shows up with the wrong colors.
-          If you have that issue, install this version instead.
-        </p>
-          <esp-web-install-button manifest="https://surrey-homeware.github.io/aura-installer/bin/manifest-inverted.json">
-            <button slot="activate">Install fix for inverted colors</button>
-          </esp-web-install-button>
-
+        </ol>	
       </div>
     </div>
   </div>
